@@ -27,10 +27,15 @@ More description soon...
 - Passthrough Ethernet connector
 - Cat 5 Ethernet cable (short)
 - Shrinking hose
+- Hey, obiouvsly, a box! 
 
 
 
 ![Internal view](https://www.oluo.it/public/mustang3-int.jpg)
+
+
+Waveshare wide touch display is very ***very*** nice! 
+..but making the square hole in the front panel is a nightmare, this display have about 2mm border and a flatcable on one side.. my suggestion: rasps and files (and be patient, self control, yoga, some cigarettes, no swear)!
 
 ## Scheme
 
