@@ -144,6 +144,10 @@ Yes, I love Deftones. The horse on the logo comes from the album ***white pony**
 
 If you want to make more background images you'll find the logo under... the `logo` folder.
 
+## Background image
+
+Background image is based on artwork by ***NAME*** found on freepik.com
+
 
 # TO-DO
 
