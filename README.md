@@ -35,6 +35,7 @@ More description soon...
 
 
 Waveshare wide touch display is very ***very*** nice! 
+
 ..but making the square hole in the front panel is a nightmare, this display have about 2mm border and a flatcable on one side.. my suggestion: rasps and files (and be patient, self control, yoga, some cigarettes, no swear)!
 
 ## Scheme
@@ -54,7 +55,8 @@ Please note, the RGB led in the switch is ***common anode*** without internal re
 
 # Installation
 Make sure you have enabled SSH access to your volumio installation. 
-Log into your raspberry with `ssh volumio@YOURVOLUMIOIP` and:
+
+From a terminal, log into your device with `ssh volumio@YOURVOLUMIOIP` and:
 
 ```
 git clone https://github.com/i0466lt/mustang_streamer.git
@@ -107,7 +109,7 @@ The main script
 
 
 # HOW-TO: Use other GPIO Pin
-You can change the PIN Number in mustang_control.py
+You can change the PIN Number in `mustang_control.py`
 Make sure the GPIO Pin are unused. You can check by running `gpio readall` from terminal
 
 
@@ -130,9 +132,16 @@ Raspberry Pi Details:
   * This Raspberry Pi supports user-level GPIO access.
 ```
 
+# Mustang Streamer logo
+
+Yes, I love Deftones. The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/copyleft project. (Chino, if you disagree please drop me a mail)
+
+If you want to make more background image youu find the logo under... the `logo` folder.
+
+
 # TO-DO
 
-- Metti qui...
+- Much to do!!
 
 ### Version 0.2
 - Added background new image for idle screen
