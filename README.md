@@ -14,11 +14,11 @@ More description soon...
 - [Waveshare POE IO Board for Raspberry CM4](https://www.waveshare.com/product/compute-module-4-poe-board-b.htm)
 - Raspberry CM4 8Gb emmc
 - [Waveshare 11.9 inch touch display](https://www.waveshare.com/11.9inch-hdmi-lcd.htm)
-- Pushbutton with RGB led
+- [Pushbutton with RGB led](https://it.rs-online.com/web/p/interruttori-a-pulsante/1759645)
 - 3x 120Ohm 1/4W resistors
 - 1x 1k 1/4W resistor
 - 1x 10k 1/4W resistor
-- Raspberry compatible soundcard (in this project is DIGI2 Pro by HiFiBerry)
+- Raspberry compatible soundcard (in this project is [DIGI2 Pro by HiFiBerry](https://www.hifiberry.com/shop/boards/hifiberry-digi2-pro/))
 - Adapter cables (based on your enclosure)
 - Some spare GPIO Jumper cables
 - RCA Panel connector
