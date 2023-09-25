@@ -10,7 +10,7 @@ More description soon...
 
 
 
-## Hardware
+# Hardware
 - [Waveshare POE IO Board for Raspberry CM4](https://www.waveshare.com/product/compute-module-4-poe-board-b.htm)
 - Raspberry CM4 8Gb emmc
 - [Waveshare 11.9 inch touch display](https://www.waveshare.com/11.9inch-hdmi-lcd.htm)
@@ -26,7 +26,7 @@ More description soon...
 - Shielded audio cable
 - Passthrough Ethernet connector
 - Cat 5 Ethernet cable (short)
-- Termorestringente?!?!?!
+- Shrinking hose
 
 
 
@@ -46,6 +46,19 @@ Used pins
 
 Please note, the RGB led in the switch is ***common anode*** without internal resistor.
 
+
+# Installation
+Make sure you have enabled SSH access to your volumio installation. 
+Log into your raspberry with `ssh volumio@YOURVOLUMIOIP` and:
+
+```
+git clone https://github.com/i0466lt/mustang_streamer.git
+cd mustang_streamer
+./setup.sh
+```
+Reboot your device with `sudo reboot`
+
+# Basic configuration
 
 ## Volumio plugin
 Install ***Now playing*** and ***Touch display*** plugin from Volumio3 plugin menu
