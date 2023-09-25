@@ -1,0 +1,15 @@
+[Unit]
+Description=Gestione Mustang Streamer
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=volumio
+ExecStart=/home/volumio/mustang_control/mustang_control.py
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
