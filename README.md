@@ -108,6 +108,12 @@ display_rotate=3 #1: 90; 2: 180; 3: 270
 The main script
 
 
+# Upgrade
+
+Login into Volumio device via SSH, enter the `mustang_control` directory and issue `git pull`
+
+
+
 # HOW-TO: Use other GPIO Pin
 You can change the PIN Number in `mustang_control.py`
 Make sure the GPIO Pin are unused. You can check by running `gpio readall` from terminal
