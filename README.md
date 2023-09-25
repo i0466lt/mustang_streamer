@@ -5,7 +5,7 @@
 Touch display and led pushbutton for Volumio 3
 
 
-Descrizione.....
+Descrizione da fare....
 
 
 ![Mustang Streamer](https://www.oluo.it/public/mustang1.jpg)
