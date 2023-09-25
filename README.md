@@ -134,14 +134,15 @@ Raspberry Pi Details:
 
 # Mustang Streamer logo
 
-Yes, I love Deftones. The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/copyleft project. (Chino, if you disagree please drop me a mail)
+Yes, I love Deftones. The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/copyleft project. (Chino, if you disagree please drop me a mail!)
 
-If you want to make more background image youu find the logo under... the `logo` folder.
+If you want to make more background images you'll find the logo under... the `logo` folder.
 
 
 # TO-DO
 
 - Much to do!!
+- What to do with a short press. Wake up display?
 
 ### Version 0.2
 - Added background new image for idle screen
