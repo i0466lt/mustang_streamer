@@ -42,7 +42,7 @@ Waveshare wide touch display is very ***very*** nice!
 ![GPIO](https://www.oluo.it/public/mustang_gpio.jpg)
 
 Used pins
-| |  |
+| HW | PIN BCM |
 |--|--|
 | Switch | GPIO17 |
 | Led Red | GPIO23 |
