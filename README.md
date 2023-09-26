@@ -78,7 +78,7 @@ Install ***Now playing*** and ***Touch display*** plugin from Volumio3 plugin me
 
 - If you want, you can set Mustang Streamer background for idle screen by selecting `mustang1_1480x320.jpg` under Now Playing Configuration -> Idle Screen
 
-![Idle backgroung](https://www.oluo.it/public/mustang1_1480x320.jpg)
+![Mustang streamer idle background](https://www.oluo.it/public/mustang1_1480x320.jpg)
 
 
 
