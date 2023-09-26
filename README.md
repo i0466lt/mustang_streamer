@@ -14,7 +14,7 @@ Mustang Streamer is a personal project that runs Volumio3 installed on a Raspber
 ![Mustang Streamer](https://www.oluo.it/public/mustang_main.jpg)
 
 
-## Led colors
+## RGB Led configuration
 
 ### PCM Formats (FLAC, MP3, Tidal, Spotify...)
 
