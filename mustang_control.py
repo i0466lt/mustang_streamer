@@ -10,6 +10,7 @@ import time
 import RPi.GPIO as GPIO
 import json
 import subprocess
+import configparser
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
