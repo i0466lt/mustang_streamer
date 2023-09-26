@@ -53,7 +53,10 @@ def button(channel):
 			os.system("sudo systemctl poweroff")
 			return
 		else:
-			display_poweron()
+			os.system('volumio play')
+			os.system('volumio pause')
+			set_timer_display()
+			#display_poweron()
 
 		time.sleep(0.1)
 
