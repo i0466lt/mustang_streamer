@@ -76,6 +76,12 @@ cd mustang_streamer
 ```
 Reboot your device with `sudo reboot`
 
+
+## Check if mustang_control is running
+
+The script runs as a systemd service. Type `systemctl status mustang_control` to check if the service is running.
+
+
 # Basic configuration
 
 ## Volumio plugin
