@@ -7,7 +7,7 @@ Mustang Streamer is a personal project that runs Volumio3 installed on a Raspber
 ## Main features
 - Turn off display after desired idle time
 - Wake up display automatically when player resume
-- Led changing color with different sampl-rates
+- Led changing color with different sample-rates
 - Wake up with button
 - Power off CM4 with button long-press
 
