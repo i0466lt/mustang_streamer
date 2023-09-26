@@ -131,6 +131,13 @@ hdmi_timings=320 0 80 16 32 1480 0 16 4 12 0 0 0 60 0 42000000 3
 display_rotate=3 #1: 90; 2: 180; 3: 270
 ```
 
+## Main configuration file (config.ini)
+
+This file contains the pin number assignments and display timeout (in seconds).
+
+Feel free to chang based on your needs.
+
+
 
 # Upgrade
 
@@ -139,7 +146,7 @@ Login into Volumio device via SSH, enter the `mustang_control` directory and iss
 
 
 # HOW-TO: Use other GPIO Pin
-You can change the PIN Number in `mustang_control.py`
+You can change the PIN Number in `config.ini` file
 Make sure the GPIO Pin are unused. You can check by running `gpio readall` from terminal
 
 
