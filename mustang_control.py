@@ -20,15 +20,17 @@ cfg_file = configparser.ConfigParser()
 cfg_file.read(fileConfig)
 
 # RGB Led pins (BCM)
-pinR = int(cfg_file['mustang streamer config']['ledRed']) #23
-pinG = int(cfg_file['mustang streamer config']['ledGreen']) #24
-pinB = int(cfg_file['mustang streamer config']['ledBlue']) #2
+pinR = int(cfg_file['mustang streamer config']['ledRed']) # default:23
+pinG = int(cfg_file['mustang streamer config']['ledGreen']) # default:24
+pinB = int(cfg_file['mustang streamer config']['ledBlue']) # default:25
 
 # 3.3v -> switch ---> 10k -> GND
 #                |_ 1k -> gpio_pin (pinRESET)	
-pinRESET = 17
+pinRESET = int(cfg_file['mustang streamer config']['button']) # default:17
 LONG_PRESS_TIME = 3.0  # in seconds
 
+# Display poweroff timer
+time_off = int(cfg_file['mustang streamer config']['timeout_display']) # Timeout display (in seconds) default:1200sec
 
 
 ### SETUP
@@ -69,7 +71,6 @@ GPIO.setup(pinB,GPIO.OUT)
 ### General config
 quality_txt = "-"		# Placeholder
 rainbow_timer = 0.35	# Startup led rainbow wait time
-time_off = 1200 		# Timeout display (in seconds)
 
 
 ##### FUNCTIONS #####
