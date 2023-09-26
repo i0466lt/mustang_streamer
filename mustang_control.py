@@ -12,14 +12,17 @@ import json
 import subprocess
 import configparser
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
 
-#### Config
+
+#### External config file
+fileConfig = 'config.ini'
+cfg_file = configparser.ConfigParser()
+cfg_file.read(fileConfig)
+
 # RGB Led pins (BCM)
-pinR = 23
-pinG = 24
-pinB = 25
+pinR = int(cfg_file['mustang streamer config']['ledRed']) #23
+pinG = int(cfg_file['mustang streamer config']['ledGreen']) #24
+pinB = int(cfg_file['mustang streamer config']['ledBlue']) #2
 
 # 3.3v -> switch ---> 10k -> GND
 #                |_ 1k -> gpio_pin (pinRESET)	
@@ -29,6 +32,9 @@ LONG_PRESS_TIME = 3.0  # in seconds
 
 
 ### SETUP
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
 # Button functions
 def button(channel):
 
