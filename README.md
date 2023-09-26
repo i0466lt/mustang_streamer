@@ -146,7 +146,7 @@ If you want to make more background images you'll find the logo under... the `lo
 
 ## Background image
 
-Background image is based on artwork by ***NAME*** found on freepik.com
+Background image is based on artwork by [freepik.com](https://it.freepik.com/foto-gratuito/composizione-astratta-della-luce-ultravioletta-uv_21794910.htm#query=background%20neon&position=9&from_view=search&track=ais)
 
 
 # TO-DO
