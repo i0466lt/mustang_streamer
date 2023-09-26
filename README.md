@@ -13,7 +13,7 @@ Mustang Streamer is a personal project that runs Volumio3 installed on a Raspber
 
 ![Mustang Streamer](https://www.oluo.it/public/mustang_main.jpg)
 
-
+___
 
 # Hardware
 - [Waveshare POE IO Board for Raspberry CM4](https://www.waveshare.com/product/compute-module-4-poe-board-b.htm)
@@ -43,7 +43,7 @@ Waveshare wide touch display is very ***very*** nice!
 
 ..but making the square hole in the front panel is a nightmare, this display have about 2mm border and a flatcable on one side.. my suggestion: rasps and files (and be patient, self control, yoga, some cigarettes, no swear)!
 
-## Scheme
+## Schematics
 
 ![GPIO](https://www.oluo.it/public/mustang_gpio.jpg)
 
@@ -104,13 +104,7 @@ hdmi_mode=87
 hdmi_timings=320 0 80 16 32 1480 0 16 4 12 0 0 0 60 0 42000000 3
 ## Display rotation
 display_rotate=3 #1: 90; 2: 180; 3: 270
-
-
 ```
-
-
-## mustang_control.py
-The main script
 
 
 # Upgrade
