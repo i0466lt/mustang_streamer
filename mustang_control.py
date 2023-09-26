@@ -15,7 +15,8 @@ import configparser
 
 
 #### External config file
-fileConfig = 'config.ini'
+basedir = '/home/volumio/mustang_streamer/'
+fileConfig = basedir + 'config.ini'
 cfg_file = configparser.ConfigParser()
 cfg_file.read(fileConfig)
 
