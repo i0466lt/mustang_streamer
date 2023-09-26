@@ -6,7 +6,7 @@ Mustang Streamer is a personal project that runs Volumio3 installed on a Raspber
 
 More description soon...
 
-![Mustang Streamer](https://www.oluo.it/public/mustang1.jpg)
+![Mustang Streamer](#)
 
 
 
