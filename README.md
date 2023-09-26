@@ -155,10 +155,11 @@ Background image is based on artwork by ***NAME*** found on freepik.com
 - What to do with a short press. Wake up display?
 
 ### Version 0.2
-- Added background new image for idle screen
+- Added external config file
+- Added background image for idle screen
 
 ### Version 0.1
-Initial version. 
+- Initial version 
 
 
 
