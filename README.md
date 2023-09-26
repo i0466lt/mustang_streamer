@@ -5,7 +5,11 @@
 Mustang Streamer is a personal project that runs Volumio3 installed on a Raspberry CM4 with HiFiBerry sound card, 11.9" touch display, led pushbutton (changing color based on audio sample rate) and POE powered. Only two cables: Ethernet and Optical output.
 
 ## Main features
-- Turn off display
+- Turn off display after desired idle time
+- Wake up display automatically when player resume
+- Led changing color with different sampl-rates
+- Wake up with button
+- Power off CM4 with button long-press
 
 ![Mustang Streamer](https://www.oluo.it/public/mustang_main.jpg)
 
