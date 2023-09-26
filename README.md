@@ -135,7 +135,7 @@ display_rotate=3 #1: 90; 2: 180; 3: 270
 
 This file contains the pin number assignments and display timeout (in seconds).
 
-Feel free to chang based on your needs.
+Feel free to change settings based on your needs.
 
 
 
