@@ -50,7 +50,7 @@ def button(channel):
 			print("- Long press! (more than "+str(LONG_PRESS_TIME)+" seconds)")
 			os.system("volumio stop")
 			led_rainbow()
-			os.system("sudo systemctl reboot")
+			os.system("sudo systemctl shutdown")
 			return
 		else:
 			display_poweron()
