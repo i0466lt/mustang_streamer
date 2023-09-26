@@ -101,7 +101,6 @@ Add these lines to your /boot/userconfig.txt to set your Waveshare display. (Als
 # Enable USB on Waveshare POE IO Board
 dtoverlay=dwc2,dr_mode=host
 
-
 #### Config for waveshare 11.9" HDMI touch display
 hdmi_force_hotplug=1
 max_framebuffer_height=1480
@@ -110,13 +109,7 @@ hdmi_mode=87
 hdmi_timings=320 0 80 16 32 1480 0 16 4 12 0 0 0 60 0 42000000 3
 ## Display rotation
 display_rotate=3 #1: 90; 2: 180; 3: 270
-
-
 ```
-
-
-## mustang_control.py
-The main script
 
 
 # Upgrade
@@ -126,13 +119,13 @@ Login into Volumio device via SSH, enter the `mustang_control` directory and iss
 
 
 # HOW-TO: Use other GPIO Pin
-You can change the PIN Number in `mustang_control.py`
+You can change the PIN Number in `config.ini`
 Make sure the GPIO Pin are unused. You can check by running `gpio readall` from terminal
 
 
 ## Note for Raspberry CM4 users
 
-Make sure you are running gpio version ***>= 2.70*** otherwise the CM4 GPIO is not recognized
+Make sure you are running gpio version ***>= 2.70*** otherwise the `gpio readall` command doesn't work
 
 ***gpio -v***
 
@@ -163,7 +156,7 @@ Background image is based on artwork by [freepik.com](https://it.freepik.com/fot
 # TO-DO
 
 - Much to do!!
-- What to do with a short press. Wake up display?
+
 
 ### Version 0.2
 - Added external config file
