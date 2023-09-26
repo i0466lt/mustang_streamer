@@ -9,7 +9,7 @@ Mustang Streamer is a personal project that runs Volumio3 installed on a Raspber
 - Long press: shutdown
 
 ### Led functions
-- The led turns on while volumio is playing.
+- The led turns on while volumio is playing
 - Led color based on audio quality
 
 
@@ -47,7 +47,7 @@ Waveshare wide touch display is very ***very*** nice!
 
 ..but making the square hole in the front panel is a nightmare, this display have about 2mm border and a flatcable on one side.. my suggestion: rasps and files (and be patient, self control, yoga, some cigarettes, no swear)!
 
-## Scheme
+## Schematics
 
 ![GPIO](https://www.oluo.it/public/mustang_gpio.jpg)
 
@@ -63,7 +63,7 @@ Please note, the RGB led in the switch is ***common anode*** without internal re
 
 
 # Installation
-Make sure you have enabled SSH access to your volumio installation. 
+Make sure you have enabled SSH access to your Volumio3 installation. 
 
 From a terminal, log into your device with `ssh volumio@YOURVOLUMIOIP` and:
 
@@ -77,7 +77,7 @@ Reboot your device with `sudo reboot`
 # Basic configuration
 
 ## Volumio plugin
-Install ***Now playing*** and ***Touch display*** plugin from Volumio3 plugin menu
+Install ***Now playing*** and ***Touch display*** plugins from Volumio3 plugin menu
 
 ## Volumio3 configuration
 
