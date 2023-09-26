@@ -13,6 +13,31 @@ Mustang Streamer is a personal project that runs Volumio3 installed on a Raspber
 
 ![Mustang Streamer](https://www.oluo.it/public/mustang_main.jpg)
 
+
+## Led colors
+
+### PCM Formats (FLAC, MP3, Tidal, Spotify...)
+
+| Sample rate | 16bit | 24bit |
+|--------|--------|--------|
+| <44kHz | Red    | -      |
+| 44kHz  | Green  | Yellow |
+| 48kHz  | Yellow | Blue   |
+| 88kHz  | Blue   | Purple |
+| 96kHz  | Purple | Cyan   |
+| 192kHz | Cyan   | White  |
+
+### DSD/DSF Formats
+
+| Format  | 1bit   |
+|---------|--------|
+| DSD64   | Yellow |
+| DSD128  | Blue   |
+| DSD256  | Purple |
+| DSD512  | Cyan   |
+| DSD1024 | White  |
+
+
 ___
 
 # Hardware
@@ -151,5 +176,6 @@ Background image is based on artwork by [freepik.com](https://it.freepik.com/fot
 # TO-DO
 
 - Much to do!!
-- What to do with a short press. Wake up display?
+
+Feel free to open issues, comment and contribute!
 
