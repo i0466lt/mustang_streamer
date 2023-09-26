@@ -56,7 +56,6 @@ def button(channel):
 			os.system('volumio play')
 			os.system('volumio pause')
 			set_timer_display()
-			#display_poweron()
 
 		time.sleep(0.1)
 
@@ -78,7 +77,7 @@ rainbow_timer = 0.35	# Startup led rainbow wait time
 
 
 ##### FUNCTIONS #####
-# Funzione per stato volumio
+# Volumio status
 def status_volumio():
 	# Volumio status
 	response = requests.get("http://localhost:3000/api/v1/getState")
@@ -99,7 +98,7 @@ def status_volumio():
 
 		if status == "play":
 			print("In riproduzione")
-			# Resetto il timer sleep display
+			# Reset display sleep timer
 			display_poweron()
 			reset_timer_display()
 
@@ -168,7 +167,7 @@ def status_volumio():
 				else: 
 					# Unknown sample rate
 					quality_txt = "Sample rate error"
-					print("### Non definito: "+volumio["samplerate"]+" "+volumio["bitdepth"])
+					print("### Undefined: "+volumio["samplerate"]+" "+volumio["bitdepth"])
 
 
 			# Audio 24bit
@@ -203,13 +202,13 @@ def status_volumio():
 				else: 
 					# Unknown sample rate
 					quality_txt = "Sample rate error"
-					print("### Non definito: "+volumio["samplerate"]+" "+volumio["bitdepth"])
+					print("### Undefined: "+volumio["samplerate"]+" "+volumio["bitdepth"])
 					led_Off()
 
 
 			elif audio_bitrate == 0:
 				# Transaction between local and streaming service
-				quality_txt = "Changing music service..."
+				quality_txt = "Switching music service..."
 				led_Off()
 
 
@@ -226,21 +225,21 @@ def status_volumio():
 
 
 		elif status == "pause":
-			print("In pausa")
+			print("Paused")
 			led_Off()
 			set_timer_display()
 		else:
-			print("Fermo")
+			print("Stopped")
 			led_Off()
 			set_timer_display()
 
 	else:
-		# Stato non definito
-		print("### Status non trovato! ###")
+		# Unknown status
+		print("### Status not found! ###")
 		led_Off()
 
 
-# Funzione per play/pausa via pulsante
+# Volumio play/pause 
 def volumio_playpausa():
 	checkplay = requests.get("http://localhost:3000/api/v1/getState")
 	playstatus = checkplay.json()
@@ -248,34 +247,33 @@ def volumio_playpausa():
 	if "status" in playstatus:
 		stato = playstatus["status"]
 
-		# Se e' in play: mette in pause
 		if stato == "play":
 			os.system('volumio pause')
 			set_timer_display()
-		# Se e' in pausa o stop: play!
+		
 		elif (stato == "pause" or stato == "stop"):
 			display_poweron()
 			os.system('volumio play')
 			reset_timer_display()
 		else:
-			print("Stato player sconosciuto!")
+			print("Unknown player status!")
 
 	else:
-		print("Nessuno stato! Errore connessione?")
+		print("No status! Is Volumio running?")
 
 
-# Funzione per spegnere il display
+# Display power off
 def display_poweroff():
 	output = subprocess.getoutput("vcgencmd display_power")
 	rawOut = output.split('=')
 	verifica = int(rawOut[1])
 	if verifica > 0:
-		print('Spegnimento display!')
+		print('Turning off display!')
 		os.system('vcgencmd display_power 0')
 		reset_timer_display()
 
 
-# Funzione per accendere il display
+# Display power on
 def display_poweron():
 	output = subprocess.getoutput("vcgencmd display_power")
 	rawOut = output.split('=')
@@ -285,9 +283,8 @@ def display_poweron():
 		os.system('vcgencmd display_power 1')
 
 
-# Funzione per mandare in sleep il monitor
+# Power off display at sleep timer
 def sleep_display():
-	#print('check sleep')
 	rawTimer = open("/tmp/timer_display.dat", "r")
 	for line in rawTimer.readlines():
 		last_timer = int(line)
@@ -295,15 +292,15 @@ def sleep_display():
 
 	if last_timer > 0:
 		tsNow = int( time.time() )
-		# E' stato impostato un timestamp
+		# Found a timestamp
 		ts_limite = last_timer + time_off
 		test = ts_limite - tsNow
-		#print('DEBUG - tsNow:'+str(tsNow)+' Limite:'+str(last_timer)+' Rimanenti:'+str(test) )
+
 		if tsNow > ts_limite:
 			display_poweroff()
 
 
-# Reset timer spegnimento display
+# Reset display sleep timer
 def reset_timer_display():
 	rawTimer = open("/tmp/timer_display.dat", "r")
 	for line in rawTimer.readlines():
@@ -315,14 +312,14 @@ def reset_timer_display():
 		timerfile.close()
 
 
-# Imposta timer per spegnimento display
+# Set display sleep timer
 def set_timer_display():
 	rawTimer = open("/tmp/timer_display.dat", "r")
 	for line in rawTimer.readlines():
 		last_timer = int(line)
 	rawTimer.close()
 	if last_timer == 0:
-		print('- Imposto timestamp per spegnimento display')
+		print('- Setting up display sleep timer')
 		tsNow = str ( int( time.time() ) )
 		timerfile = open("/tmp/timer_display.dat", "w")
 		timerfile.write(tsNow)
@@ -331,8 +328,7 @@ def set_timer_display():
 
 
 
-## Funzioni Led RGB
-# Led spento
+## RGB Led definitions
 def led_Off():
 	GPIO.output(pinR,GPIO.HIGH)
 	GPIO.output(pinG,GPIO.HIGH)
@@ -373,7 +369,7 @@ def led_Cyan():
     GPIO.output(pinG,GPIO.LOW)
     GPIO.output(pinB,GPIO.LOW)
 
-# Sequenza arcobaleno avvio
+# Rainbow
 def led_rainbow(quanti):
 	for i in range(quanti):	
 		print("Rainbow!")
@@ -393,7 +389,7 @@ def led_rainbow(quanti):
 		time.sleep(rainbow_timer)
 	led_Off()
 
-###### FINE FUNZIONI #######
+###### END FUNCTIONS #######
 
 
 
@@ -402,7 +398,7 @@ led_Off()
 print("##### Mustang Streamer starting.. #####\n")
 led_rainbow(1)
 
-# imposta la variabile per il controllo sleep display
+# Set first display timer
 timerfile = open("/tmp/timer_display.dat", "w")
 timerfile.write("0")
 timerfile.close()
@@ -423,5 +419,5 @@ except KeyboardInterrupt:
 	print("\nUser interrupt..")
 	GPIO.cleanup()
 
-## Chiusura
+## Last
 GPIO.cleanup()

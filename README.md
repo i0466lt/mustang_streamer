@@ -1,19 +1,8 @@
-# Mustang Streamer control (v. 0.2)
+# Mustang Streamer control
 
 ![Mustang Streamer logo](https://www.oluo.it/public/mustang1_1480x320.jpg)
 
-Mustang Streamer is a personal project that runs Volumio3 installed on a Raspberry CM4 with HiFiBerry sound card, 11.9" touch display, led pushbutton (changing color based on audio sample rate) and POE powered. 
-
-Only two cables: Ethernet and Optical audio output.
-
-### Button functions
-- Short press: wake up display
-- Long press: shutdown
-
-### Led functions
-- The led turns on while volumio is playing
-- Led color based on audio quality
-
+Mustang Streamer is a personal project that runs Volumio3 installed on a Raspberry CM4 with HiFiBerry sound card, 11.9" touch display, led pushbutton (changing color based on audio sample rate) and POE powered. Only two cables: Ethernet and Optical output.
 
 More description soon...
 
@@ -49,7 +38,7 @@ Waveshare wide touch display is very ***very*** nice!
 
 ..but making the square hole in the front panel is a nightmare, this display have about 2mm border and a flatcable on one side.. my suggestion: rasps and files (and be patient, self control, yoga, some cigarettes, no swear)!
 
-## Schematics
+## Scheme
 
 ![GPIO](https://www.oluo.it/public/mustang_gpio.jpg)
 
@@ -65,7 +54,7 @@ Please note, the RGB led in the switch is ***common anode*** without internal re
 
 
 # Installation
-Make sure you have enabled SSH access to your Volumio3 installation. 
+Make sure you have enabled SSH access to your volumio installation. 
 
 From a terminal, log into your device with `ssh volumio@YOURVOLUMIOIP` and:
 
@@ -76,16 +65,10 @@ cd mustang_streamer
 ```
 Reboot your device with `sudo reboot`
 
-
-## Check if mustang_control is running
-
-The script runs as a systemd service. Type `systemctl status mustang_control` to check if the service is running.
-
-
 # Basic configuration
 
 ## Volumio plugin
-Install ***Now playing*** and ***Touch display*** plugins from Volumio3 plugin menu
+Install ***Now playing*** and ***Touch display*** plugin from Volumio3 plugin menu
 
 ## Volumio3 configuration
 
@@ -107,6 +90,7 @@ Add these lines to your /boot/userconfig.txt to set your Waveshare display. (Als
 # Enable USB on Waveshare POE IO Board
 dtoverlay=dwc2,dr_mode=host
 
+
 #### Config for waveshare 11.9" HDMI touch display
 hdmi_force_hotplug=1
 max_framebuffer_height=1480
@@ -115,7 +99,13 @@ hdmi_mode=87
 hdmi_timings=320 0 80 16 32 1480 0 16 4 12 0 0 0 60 0 42000000 3
 ## Display rotation
 display_rotate=3 #1: 90; 2: 180; 3: 270
+
+
 ```
+
+
+## mustang_control.py
+The main script
 
 
 # Upgrade
@@ -125,13 +115,13 @@ Login into Volumio device via SSH, enter the `mustang_control` directory and iss
 
 
 # HOW-TO: Use other GPIO Pin
-You can change the PIN Number in `config.ini`
+You can change the PIN Number in `mustang_control.py`
 Make sure the GPIO Pin are unused. You can check by running `gpio readall` from terminal
 
 
 ## Note for Raspberry CM4 users
 
-Make sure you are running gpio version ***>= 2.70*** otherwise the `gpio readall` command doesn't work
+Make sure you are running gpio version ***>= 2.70*** otherwise the CM4 GPIO is not recognized
 
 ***gpio -v***
 
@@ -162,15 +152,5 @@ Background image is based on artwork by [freepik.com](https://it.freepik.com/fot
 # TO-DO
 
 - Much to do!!
-
-
-### Version 0.2
-- Added external config file
-- Added background image for idle screen
-
-### Version 0.1
-- Initial version 
-
-
-
+- What to do with a short press. Wake up display?
 
