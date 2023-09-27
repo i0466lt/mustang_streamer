@@ -177,7 +177,7 @@ Raspberry Pi Details:
 
 # Mustang Streamer logo
 
-Yes, I love Deftones! The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/copyleft project. (Chino, if you disagree please drop me a mail!)
+Yes, I love Deftones! The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/free project. (Chino, if you disagree please drop me a mail!)
 
 If you want to make more background images with this logo, you'll find the SVG vector file under the `logo` folder.
 
