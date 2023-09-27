@@ -147,8 +147,9 @@ Login into Volumio device via SSH, enter the `mustang_control` directory and iss
 
 
 # HOW-TO: Use other GPIO Pin
-First, check unused pins by runni
-You can change the PIN Number in `config.ini` file
+
+You can change the PIN Number in `config.ini` file.
+
 Make sure the desired GPIO Pins are unused. You can check by running `gpio readall` from terminal.
 
 
