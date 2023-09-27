@@ -24,8 +24,11 @@ sudo ldconfig
 
 
 # Setting up services
-sudo cp app_setup/mustang_control.service /lib/system/systemd/
-sudo systemctl daemon reload
+sudo cp /home/volumio/mustang_control/app_setup/mustang_control.service /lib/systemd/system/
+sudo systemctl daemon-reload
 sudo systemctl enable mustang_control.service
+echo -e "\nStarting Mustang streamer service.."
 sudo systemctl start mustang_control.service
+sudo systemctl status mustang_control.service
 
+echo -e "\n\nInstallation complete!\n"
