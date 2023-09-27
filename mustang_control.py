@@ -84,8 +84,8 @@ def status_volumio():
 	volumio = response.json()
 
 	if "samplerate" in volumio:
-		raw_samplerate = volumio["samplerate"].split()
-		raw_bit = volumio["bitdepth"].split()
+		raw_samplerate = str(volumio["samplerate"]).split()
+		raw_bit = str(volumio["bitdepth"]).split()
 		audio_samplerate = float(raw_samplerate[0])
 		audio_bitrate = int(raw_bit[0])
 	else:
@@ -221,7 +221,7 @@ def status_volumio():
 
 				
 			# Print audio quality on terminal
-			print("Audio quality: "+quality_txt+" "+volumio["bitdepth"]+" "+volumio["samplerate"])
+			print("Audio quality: "+quality_txt+" "+str(volumio["bitdepth"])+" "+str(volumio["samplerate"]) )
 
 
 		elif status == "pause":
