@@ -72,13 +72,14 @@ Waveshare wide touch display is very ***very*** nice!
 
 ![GPIO](https://www.oluo.it/public/mustang_gpio.jpg)
 
-Used pins
-| HW | PIN BCM |
-|--|--|
-| Switch | GPIO17 |
-| Led Red | GPIO23 |
-| Led Green | GPIO24 |
-| Led Blue | GPIO25 |
+Used pins:
+
+| HW        | PIN BCM |
+|-----------|---------|
+| Switch    | GPIO17  |
+| Led Red   | GPIO23  |
+| Led Green | GPIO24  |
+| Led Blue  | GPIO25  |
 
 Please note, the RGB led in the switch is ***common anode*** without internal resistor.
 
@@ -146,15 +147,19 @@ Login into Volumio device via SSH, enter the `mustang_control` directory and iss
 
 
 # HOW-TO: Use other GPIO Pin
+First, check unused pins by runni
 You can change the PIN Number in `config.ini` file
-Make sure the GPIO Pin are unused. You can check by running `gpio readall` from terminal
+Make sure the desired GPIO Pins are unused. You can check by running `gpio readall` from terminal.
+
+
+If you don't have the `gpio` command install ***WiringPi unofficial fork*** at [https://github.com/WiringPi/WiringPi](https://github.com/WiringPi/WiringPi). I suggest to install the unofficial fork because WiringPi development ceased some years ago. The unofficial fork works and grant support to new hardware like CM4.
 
 
 ## Note for Raspberry CM4 users
 
-Make sure you are running gpio version ***>= 2.70*** otherwise the CM4 GPIO is not recognized
+If you are running a Raspberry CM4, make sure you are running `gpio` version ***>=2.70*** otherwise the CM4 GPIO is not recognized by `gpio readall` command. You can check your version by type `gpio -v` in the volumio device terminal.
 
-***gpio -v***
+Example fom my device:
 
 ```
 gpio version: 2.70
@@ -171,9 +176,10 @@ Raspberry Pi Details:
 
 # Mustang Streamer logo
 
-Yes, I love Deftones. The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/copyleft project. (Chino, if you disagree please drop me a mail!)
+Yes, I love Deftones! The horse on the logo comes from the album ***white pony***. I've used as part of this useless/non-commercial/diy/copyleft project. (Chino, if you disagree please drop me a mail!)
 
-If you want to make more background images you'll find the logo under... the `logo` folder.
+If you want to make more background images with this logo, you'll find the SVG vector file under the `logo` folder.
+
 
 ## Background image
 

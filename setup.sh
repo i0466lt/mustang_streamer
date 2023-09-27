@@ -14,6 +14,14 @@ cp app_setup/*.jpg /data/backgrounds/
 # Python3 modules
 sudo pip3 install requests
 
+# WiringPi unofficial fork (Support new devices like CM4)
+git clone https://github.com/WiringPi/WiringPi.git
+cd WiringPi
+./build
+
+# Finishing..
+sudo ldconfig
+
 
 # Setting up services
 sudo cp app_setup/mustang_control.service /lib/system/systemd/
