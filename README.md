@@ -139,9 +139,9 @@ Feel free to change settings based on your needs.
 
 
 
-# Upgrade
+# Update
 
-Login into Volumio device via SSH, enter the `mustang_control` directory and issue `git pull`
+Login into Volumio device via SSH, enter the `mustang_control` directory and issue `./update.sh`
 
 
 
