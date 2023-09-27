@@ -44,26 +44,27 @@ def button(channel):
 	print("Button pressed")
 
 	start_time = time.time()
+	
 	while GPIO.input(channel) == GPIO.HIGH:
 		# Check if is a long press or normal button press
 		if time.time() - start_time > LONG_PRESS_TIME:
 			print("- Long press! (more than "+str(LONG_PRESS_TIME)+" seconds)")
 			os.system("volumio stop")
-			led_rainbow(1)
+			led_Red()
 			os.system("sudo systemctl poweroff")
 			return
 		else:
-			os.system('volumio play')
-			os.system('volumio pause')
+			# Code for short press
+			os.system('volumio toggle')
 			set_timer_display()
 
-		time.sleep(0.1)
+		time.sleep(1)
 
 
 
 # GPIO: Setup button
 GPIO.setup(pinRESET, GPIO.IN, GPIO.PUD_DOWN)
-GPIO.add_event_detect(pinRESET, GPIO.RISING, callback=button, bouncetime=500)
+GPIO.add_event_detect(pinRESET, GPIO.RISING, callback=button, bouncetime=4000)
 
 
 # GPIO: Setup RGB led pins
