@@ -25,10 +25,14 @@ pinR = int(cfg_file['mustang streamer config']['ledRed']) # default:23
 pinG = int(cfg_file['mustang streamer config']['ledGreen']) # default:24
 pinB = int(cfg_file['mustang streamer config']['ledBlue']) # default:25
 
+
+# Button
 # 3.3v -> switch ---> 10k -> GND
 #                |_ 1k -> gpio_pin (pinRESET)	
 pinRESET = int(cfg_file['mustang streamer config']['button']) # default:17
+button_action = str(cfg_file['mustang streamer config']['long_press']) # default:poweroff
 LONG_PRESS_TIME = 3.0  # in seconds
+
 
 # Display poweroff timer
 time_off = int(cfg_file['mustang streamer config']['timeout_display']) # Timeout display (in seconds) default:1200sec
@@ -51,7 +55,7 @@ def button(channel):
 			print("- Long press! (more than "+str(LONG_PRESS_TIME)+" seconds)")
 			os.system("volumio stop")
 			led_Red()
-			os.system("sudo systemctl poweroff")
+			os.system("sudo systemctl " + button_action )
 			return
 		else:
 			# Code for short press
@@ -418,7 +422,9 @@ try:
 
 except KeyboardInterrupt:
 	print("\nUser interrupt..")
+	led_Off()
 	GPIO.cleanup()
 
 ## Last
+led_Off()
 GPIO.cleanup()

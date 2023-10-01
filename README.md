@@ -4,12 +4,15 @@
 
 Mustang Streamer is a personal project that runs Volumio3 installed on a Raspberry CM4 with HiFiBerry sound card, 11.9" touch display, led pushbutton (changing color based on audio sample rate) and POE powered. Only two cables: Ethernet and Optical output.
 
+This software works on Raspberry CM4, Raspberry Pi 3, Raspberry Pi 4. Feel free to test on other platforms and please report the issues.
+
 ## Main features
 - Turn off display after desired idle time
 - Wake up display automatically when player resume
 - Led changing color with different sample-rates
 - Wake up with button
-- Power off CM4 with button long-press
+- Play/pause with button short press
+- Power off or reboot CM4 with button long press
 
 ![Mustang Streamer](https://www.oluo.it/public/mustang_main.jpg)
 
@@ -136,7 +139,16 @@ display_rotate=3 #1: 90; 2: 180; 3: 270
 
 This file contains the pin number assignments and display timeout (in seconds).
 
-Feel free to change settings based on your needs.
+Change settings based on your needs.
+
+| Parameter | default | options |
+|-----------|---------|---------|
+| ledRed | 23 | Control red part of RGB led |
+| ledGreen | 24 | Control green part of RGB led |
+| ledBlue | 25 | Control blue part of RGB led |
+| button | 17 | Button pin |
+| timeout_display | 1200 | Seconds before turn off display |
+| long_press | reboot | Choose between poweroff or reboot |
 
 
 
