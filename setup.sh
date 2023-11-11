@@ -8,11 +8,12 @@ echo -e "Mustang streamer setup.."
 cp app_setup/*.jpg /data/backgrounds/
 
 # GPIO
-
+sudo pip3 install --upgrade RPi.GPIO
 
 
 # Python3 modules
 sudo pip3 install requests
+
 
 # WiringPi unofficial fork (Support new devices like CM4)
 git clone https://github.com/WiringPi/WiringPi.git
@@ -21,6 +22,14 @@ cd WiringPi
 
 # Finishing..
 sudo ldconfig
+
+# Adding various permissions
+sudo echo "volumio ALL=(ALL) NOPASSWD: /usr/bin/vcgencmd" >> /etc/sudoers
+sudo usermod -a -G kmem volumio
+sudo chown root.gpio /dev/gpiomem
+sudo chmod g+rw /dev/gpiomem
+
+
 
 
 # Setting up services

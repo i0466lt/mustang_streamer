@@ -1,4 +1,4 @@
 #!/bin/bash
 # Utility: turn off display
 
-vcgencmd display_power 0
+sudo vcgencmd display_power 0

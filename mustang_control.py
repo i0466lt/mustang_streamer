@@ -269,23 +269,23 @@ def volumio_playpausa():
 
 # Display power off
 def display_poweroff():
-	output = subprocess.getoutput("vcgencmd display_power")
+	output = subprocess.getoutput("sudo vcgencmd display_power")
 	rawOut = output.split('=')
 	verifica = int(rawOut[1])
 	if verifica > 0:
 		print('Turning off display!')
-		os.system('vcgencmd display_power 0')
+		os.system('sudo vcgencmd display_power 0')
 		reset_timer_display()
 
 
 # Display power on
 def display_poweron():
-	output = subprocess.getoutput("vcgencmd display_power")
+	output = subprocess.getoutput("sudo vcgencmd display_power")
 	rawOut = output.split('=')
 	verifica = int(rawOut[1])
 	if verifica == 0:
 		print('WAKEUP display!')
-		os.system('vcgencmd display_power 1')
+		os.system('sudo vcgencmd display_power 1')
 
 
 # Power off display at sleep timer

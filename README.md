@@ -1,4 +1,4 @@
-# Mustang Streamer control
+# Mustang Streamer control (v.0.4)
 
 ![Mustang Streamer logo](https://www.oluo.it/public/mustang1_1480x320.jpg)
 

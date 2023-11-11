@@ -1,5 +1,8 @@
 # Changelog
 
+### Version 0.4
+- Fixed gpio and vcgencmd permissions 
+
 ### Version 0.3
 - Added function to choose action on button long press (poweroff or reboot) 
 - Turn off led on service stop or manual abort
