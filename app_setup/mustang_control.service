@@ -7,7 +7,7 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=5
-User=volumio
+User=root
 ExecStart=/home/volumio/mustang_control/mustang_control.py
 StandardOutput=null
 
