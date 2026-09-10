@@ -28,7 +28,7 @@ pinB = int(cfg_file['mustang streamer config']['ledBlue']) # default:25
 
 # Button
 # 3.3v -> switch ---> 10k -> GND
-#                |_ 1k -> gpio_pin (pinRESET)	
+#                |_ 1k -> gpio_pin (pinRESET)
 pinRESET = int(cfg_file['mustang streamer config']['button']) # default:17
 button_action = str(cfg_file['mustang streamer config']['long_press']) # default:poweroff
 LONG_PRESS_TIME = 3.0  # in seconds
@@ -68,7 +68,7 @@ def button(channel):
 
 # GPIO: Setup button
 GPIO.setup(pinRESET, GPIO.IN, GPIO.PUD_DOWN)
-GPIO.add_event_detect(pinRESET, GPIO.RISING, callback=button, bouncetime=4000)
+###GPIO.add_event_detect(pinRESET, GPIO.RISING, callback=button, bouncetime=4000)
 
 
 # GPIO: Setup RGB led pins
@@ -78,7 +78,7 @@ GPIO.setup(pinB,GPIO.OUT)
 
 ### General config
 quality_txt = "-"		# Placeholder
-rainbow_timer = 0.35	# Startup led rainbow wait time
+rainbow_timer = 0.25	# Startup led rainbow wait time
 
 
 ##### FUNCTIONS #####
@@ -415,7 +415,7 @@ try:
 	while True:
 
 		status_volumio()
-
+#		volumio_playpausa()
 		sleep_display()
 
 		time.sleep(0.3)
