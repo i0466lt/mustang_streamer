@@ -1,6 +1,6 @@
 # Mustang Streamer control (v.0.4)
 
-![Mustang Streamer logo](https://www.oluo.it/public/mustang1_1480x320.jpg)
+![Mustang Streamer logo](https://www.oluo.eu/public/mustang1_1480x320.jpg)
 
 Mustang Streamer is a personal project that runs Volumio3 installed on a Raspberry CM4 with HiFiBerry sound card, 11.9" touch display, led pushbutton (changing color based on audio sample rate) and POE powered. Only two cables: Ethernet and Optical output.
 
@@ -14,7 +14,7 @@ This software works on Raspberry CM4, Raspberry Pi 3, Raspberry Pi 4. Feel free 
 - Play/pause with button short press
 - Power off or reboot CM4 with button long press
 
-![Mustang Streamer](https://www.oluo.it/public/mustang_main.jpg)
+![Mustang Streamer](https://www.oluo.eu/public/mustang_main.jpg)
 
 
 ## RGB Led configuration
@@ -64,7 +64,7 @@ ___
 
 
 
-![Internal view](https://www.oluo.it/public/mustang3-int.jpg)
+![Internal view](https://www.oluo.eu/public/mustang3-int.jpg)
 
 
 Waveshare wide touch display is very ***very*** nice! 
@@ -73,7 +73,7 @@ Waveshare wide touch display is very ***very*** nice!
 
 ## Schematics
 
-![GPIO](https://www.oluo.it/public/mustang_gpio.jpg)
+![GPIO](https://www.oluo.eu/public/mustang_gpio.jpg)
 
 Used pins:
 
@@ -112,7 +112,7 @@ Install ***Now playing*** and ***Touch display*** plugin from Volumio3 plugin me
 
 - If you want, you can set Mustang Streamer background for idle screen by selecting `mustang1_1480x320.jpg` under Now Playing Configuration -> Idle Screen
 
-![Mustang streamer idle background](https://www.oluo.it/public/mustang1_1480x320.jpg)
+![Mustang streamer idle background](https://www.oluo.eu/public/mustang1_1480x320.jpg)
 
 
 
