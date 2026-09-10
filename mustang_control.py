@@ -88,14 +88,27 @@ def status_volumio():
 	response = requests.get("http://localhost:3000/api/v1/getState")
 	volumio = response.json()
 
-	if "samplerate" in volumio:
-		raw_samplerate = str(volumio["samplerate"]).split()
-		raw_bit = str(volumio["bitdepth"]).split()
-		audio_samplerate = float(raw_samplerate[0])
-		audio_bitrate = int(raw_bit[0])
-	else:
-		audio_samplerate = 0
-		audio_bitrate = 0
+	samplerate_raw = str(volumio.get("samplerate", "")).strip()
+	bitdepth_raw = str(volumio.get("bitdepth", "")).strip()
+
+	try:
+	    audio_samplerate = float(samplerate_raw.split()[0])
+	    audio_bitrate = int(bitdepth_raw.split()[0])
+	except (IndexError, ValueError, TypeError):
+	    audio_samplerate = 0
+	    audio_bitrate = 0
+	    print(
+	        "Audio format not available yet: "
+	        f"samplerate={samplerate_raw!r}, bitdepth={bitdepth_raw!r}"
+	    )
+	# if "samplerate" in volumio:
+	# 	raw_samplerate = str(volumio["samplerate"]).split()
+	# 	raw_bit = str(volumio["bitdepth"]).split()
+	# 	audio_samplerate = float(raw_samplerate[0])
+	# 	audio_bitrate = int(raw_bit[0])
+	# else:
+	# 	audio_samplerate = 0
+	# 	audio_bitrate = 0
 
 	if "status" in volumio:	
 

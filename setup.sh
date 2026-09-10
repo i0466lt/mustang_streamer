@@ -28,7 +28,9 @@ sudo echo "volumio ALL=(ALL) NOPASSWD: /usr/bin/vcgencmd" >> /etc/sudoers
 sudo usermod -a -G kmem volumio
 sudo chown root.gpio /dev/gpiomem
 sudo chmod g+rw /dev/gpiomem
-
+sudo touch /tmp/timer_display.dat
+sudo chown volumio:volumio /tmp/timer_display.dat
+sudo chmod 644 /tmp/timer_display.dat
 
 
 
